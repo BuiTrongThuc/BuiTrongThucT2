@@ -1,0 +1,17 @@
+{
+  "name": "student/webbanhang",
+  "description": "Website MVC chuyển sang RESTful API + JWT cho LAB 5&6",
+  "type": "project",
+  "require": {
+    "php": ">=7.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "notes": [
+    "Project dùng JwtHelper thuần PHP HS256 để chạy được trên Laragon/InfinityFree không cần composer install.",
+    "Nếu giảng viên yêu cầu thư viện ngoài, có thể bổ sung firebase/php-jwt bằng Composer."
+  ]
+}

@@ -1,0 +1,5 @@
+<?php include 'app/views/layouts/header.php'; ?>
+
+<h2 class="fw-bold mb-3">Hỗ trợ khách hàng / Ticket</h2><div class="row g-3"><div class="col-lg-5"><div class="card-soft p-3"><h5>Gửi yêu cầu hỗ trợ</h5><form method="post"><input class="form-control mb-2" name="subject" placeholder="Tiêu đề" required><textarea class="form-control mb-2" name="message" rows="5" placeholder="Nội dung" required></textarea><button class="btn btn-primary">Gửi</button></form><hr><p><b>Hotline:</b> 1800 2199</p><p><b>Chatbot:</b> Demo hiển thị — có thể tích hợp Messenger/Zalo sau.</p></div></div><div class="col-lg-7"><div class="card-soft p-3"><h5>Ticket của tôi</h5><?php foreach($tickets as $t): ?><div class="border-bottom py-2"><b><?php echo htmlspecialchars($t->subject, ENT_QUOTES, 'UTF-8'); ?></b> <span class="badge bg-info"><?php echo htmlspecialchars($t->status, ENT_QUOTES, 'UTF-8'); ?></span><p><?php echo htmlspecialchars($t->message, ENT_QUOTES, 'UTF-8'); ?></p></div><?php endforeach; ?><?php if(empty($tickets)): ?><p class="text-muted">Chưa có ticket.</p><?php endif; ?></div></div></div>
+
+<?php include 'app/views/layouts/footer.php'; ?>
